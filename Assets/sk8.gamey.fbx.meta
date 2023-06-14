@@ -67,9 +67,51 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 0
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/board
+        weight: 1
+      - path: Armature/root/board/truck.N
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L/wheel.N.L_end
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R/wheel.N.R_end
+        weight: 1
+      - path: Armature/root/board/truck.T
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L/wheel.T.L_end
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R/wheel.T.R_end
+        weight: 1
+      - path: board
+        weight: 0
+      - path: hanger.N
+        weight: 0
+      - path: hanger.T
+        weight: 0
+      - path: wheel.N.L
+        weight: 0
+      - path: wheel.N.R
+        weight: 0
+      - path: wheel.T.L
+        weight: 0
+      - path: wheel.T.R
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 8b8176dc650e6f74496fe26dd7ba2c6b, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: left
@@ -96,9 +138,51 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 0
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/board
+        weight: 1
+      - path: Armature/root/board/truck.N
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L/wheel.N.L_end
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R/wheel.N.R_end
+        weight: 1
+      - path: Armature/root/board/truck.T
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L/wheel.T.L_end
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R/wheel.T.R_end
+        weight: 1
+      - path: board
+        weight: 0
+      - path: hanger.N
+        weight: 0
+      - path: hanger.T
+        weight: 0
+      - path: wheel.N.L
+        weight: 0
+      - path: wheel.N.R
+        weight: 0
+      - path: wheel.T.L
+        weight: 0
+      - path: wheel.T.R
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 8b8176dc650e6f74496fe26dd7ba2c6b, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: middle
@@ -125,9 +209,51 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 0
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/board
+        weight: 1
+      - path: Armature/root/board/truck.N
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.L/wheel.N.L_end
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R
+        weight: 1
+      - path: Armature/root/board/truck.N/wheel.N.R/wheel.N.R_end
+        weight: 1
+      - path: Armature/root/board/truck.T
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.L/wheel.T.L_end
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R
+        weight: 1
+      - path: Armature/root/board/truck.T/wheel.T.R/wheel.T.R_end
+        weight: 1
+      - path: board
+        weight: 0
+      - path: hanger.N
+        weight: 0
+      - path: hanger.T
+        weight: 0
+      - path: wheel.N.L
+        weight: 0
+      - path: wheel.N.R
+        weight: 0
+      - path: wheel.T.L
+        weight: 0
+      - path: wheel.T.R
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 8b8176dc650e6f74496fe26dd7ba2c6b, type: 2}
       additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
@@ -186,7 +312,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -194,7 +320,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

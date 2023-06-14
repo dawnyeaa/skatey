@@ -4,31 +4,55 @@ using UnityEngine;
 
 [ExecuteAlways]
 public class FuckYeah : MonoBehaviour {
-    private const float GIZMO_DISK_THICKNESS = 0.01f;
-    [Range(-1,1)]
-    public float turn = 0;
-    public Animator skateanim;
+  [Range(-1,1)]
+  public float turn = 0;
+  public float visDistance = 10f;
+  public float truckSpacing = 0.205f;
+  public float maxTruckTurnDeg = 8.34f;
+  public float wheelRadius = 0.03f;
+  private float wheelCircumfrence = 0.1884956f;
 
-    // public static void DrawGizmoDisk(Vector3 pos, float radius) {
-    //     Matrix4x4 oldMatrix = Gizmos.matrix;
-    //     Gizmos.color = new Color(0.2f, 0.2f, 0.2f, 0.5f); //this is gray, could be anything
-    //     Gizmos.matrix = Matrix4x4.TRS(pos, Quaternion.identity, new Vector3(1, GIZMO_DISK_THICKNESS, 1));
-    //     Gizmos.DrawSphere(pos, radius);
-    //     Gizmos.matrix = oldMatrix;
-    // }
+  public float goSpeed = 3.2f;
+  public Animator skateanim;
+  public WheelController wheels;
 
-    // Update is called once per frame
-    void Update() {
-        skateanim.SetFloat("dir", turn);
+  // Update is called once per frame
+  void Update() {
+    skateanim.SetFloat("dir", turn);
+    SpinWheels(goSpeed, wheelCircumfrence);
+    transform.position += transform.forward*Time.deltaTime*goSpeed;
+  }
+
+  void DrawArcGizmo(Vector3 arcStart, Vector3 arcCenterDir, float arcRadius, float arcDegrees, int segCount=30) {
+    float startDeg, endDeg;
+    Vector3 arcCenterDirSigned = arcCenterDir*(arcDegrees>0?1:-1);
+    float arcDegNorm = Mathf.Abs(arcDegrees);
+    float segLengthDeg = arcDegrees/segCount;
+    Vector3 clockHand = -arcCenterDirSigned*arcRadius;
+    Vector3 centerPos = arcStart-clockHand;
+    Vector3 circleUp = Vector3.up;
+    for (int i = 0; i < segCount; ++i) {
+      startDeg = i*segLengthDeg;
+      endDeg = startDeg + segLengthDeg;
+      Vector3 startPos = (Quaternion.AngleAxis(startDeg, circleUp) * clockHand) + centerPos;
+      Vector3 endPos = (Quaternion.AngleAxis(endDeg, circleUp) * clockHand) + centerPos;
+      Gizmos.DrawLine(startPos, endPos);
     }
+  }
 
-    void OnDrawGizmos() {
-        if (turn==0) {
-            Gizmos.DrawRay(transform.position-100*transform.right, transform.right*200);
-        }
-        else {
-            float radius = 0.205f/Mathf.Sin(Mathf.Deg2Rad*turn*8.34f);
-            Gizmos.DrawWireSphere(transform.position + (Vector3.forward*radius), Mathf.Abs(radius));
-        }
+  void OnDrawGizmos() {
+    if (turn==0) {
+      Gizmos.DrawRay(transform.position, transform.forward*visDistance);
     }
+    else {
+      float radius = truckSpacing/Mathf.Sin(Mathf.Deg2Rad*turn*maxTruckTurnDeg);
+      float circum = Mathf.PI*2*radius;
+      float arcDegrees = Mathf.Clamp(visDistance/circum, -1f, 1f)*360f;
+      DrawArcGizmo(transform.position, transform.right, Mathf.Abs(radius), arcDegrees);
+    }
+  }
+
+  void SpinWheels(float speed, float circum) {
+    wheels.AddRotation(((Time.deltaTime*speed)/circum)*360f);
+  }
 }
