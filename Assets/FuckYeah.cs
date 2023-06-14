@@ -20,7 +20,11 @@ public class FuckYeah : MonoBehaviour {
   void Update() {
     skateanim.SetFloat("dir", turn);
     SpinWheels(goSpeed, wheelCircumfrence);
-    transform.position += transform.forward*Time.deltaTime*goSpeed;
+    float deltaPos = Time.deltaTime*goSpeed;
+    float rad = truckSpacing/Mathf.Sin(Mathf.Deg2Rad*turn*maxTruckTurnDeg);
+    float circum = Mathf.PI*2*rad;
+    transform.position += transform.forward*deltaPos;
+    transform.rotation = Quaternion.AngleAxis((deltaPos/circum)*360f, transform.up) * transform.rotation;
   }
 
   void DrawArcGizmo(Vector3 arcStart, Vector3 arcCenterDir, float arcRadius, float arcDegrees, int segCount=30) {

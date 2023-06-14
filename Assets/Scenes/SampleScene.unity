@@ -172,7 +172,7 @@ MonoBehaviour:
   truckSpacing: 0.205
   maxTruckTurnDeg: 8.34
   wheelRadius: 0.03
-  goSpeed: 0.24
+  goSpeed: 0
   skateanim: {fileID: 278238940}
   wheels: {fileID: 278238944}
 --- !u!114 &278238944
@@ -191,7 +191,7 @@ MonoBehaviour:
   wheel2: {fileID: 703872376}
   wheel3: {fileID: 6296808}
   wheel4: {fileID: 1765403737}
-  rotationDeg: 171.9227
+  rotationDeg: 12.732521
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e5e435bad0eba85409bf0ab6634baa73,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.732865
+      value: 13.157475
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e435bad0eba85409bf0ab6634baa73,
         type: 3}
