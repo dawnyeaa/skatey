@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turn: 0
+  skateanim: {fileID: 278238940}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

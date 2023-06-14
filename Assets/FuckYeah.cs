@@ -7,6 +7,7 @@ public class FuckYeah : MonoBehaviour {
     private const float GIZMO_DISK_THICKNESS = 0.01f;
     [Range(-1,1)]
     public float turn = 0;
+    public Animator skateanim;
 
     // public static void DrawGizmoDisk(Vector3 pos, float radius) {
     //     Matrix4x4 oldMatrix = Gizmos.matrix;
@@ -18,6 +19,7 @@ public class FuckYeah : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        skateanim.SetFloat("dir", turn);
     }
 
     void OnDrawGizmos() {
@@ -26,7 +28,7 @@ public class FuckYeah : MonoBehaviour {
         }
         else {
             float radius = 0.205f/Mathf.Sin(Mathf.Deg2Rad*turn*8.34f);
-            Gizmos.DrawWireSphere(transform.position + (-Vector3.forward*radius), Mathf.Abs(radius));
+            Gizmos.DrawWireSphere(transform.position + (Vector3.forward*radius), Mathf.Abs(radius));
         }
     }
 }
