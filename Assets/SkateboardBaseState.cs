@@ -52,6 +52,7 @@ public abstract class SkateboardBaseState : State {
   protected void CalculateTurn() {
     if (stateMachine.CurrentSpeed > 0) {
       stateMachine.Turning = Mathf.SmoothDamp(stateMachine.Turning, stateMachine.Input.turn, ref TurnSpeed, stateMachine.TurnSpeedDamping);
+      stateMachine.CurrentSpeed -= Mathf.Abs(stateMachine.Turning)*stateMachine.TurnSlowdown*Time.deltaTime;
       float deltaPos = Time.deltaTime*stateMachine.CurrentSpeed;
       float rad = stateMachine.TruckSpacing/Mathf.Sin(Mathf.Deg2Rad*stateMachine.Turning*stateMachine.MaxTruckTurnDeg);
       float circum = Mathf.PI*2*rad;

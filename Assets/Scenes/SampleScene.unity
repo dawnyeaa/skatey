@@ -208,10 +208,10 @@ MonoBehaviour:
   Facing: 0
   Turning: 0
   MaxSpeed: 5
-  PushAccel: 20
+  PushAccel: 40
   PushDuration: 0.5
   PushCooldown: 0.3
-  Drag: 0.01
+  Drag: 0.03
   Mass: 2
   TruckSpacing: 0.205
   MaxTruckTurnDeg: 8.34
@@ -242,6 +242,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   LookRotationDampFactor: 10
   TurnSpeedDamping: 0.3
+  TurnSlowdown: 100
   DecelTime: 0
   Decelerating: 0
   PushTime: 0
@@ -350,7 +351,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.2968764, y: 0.00000003528454, z: -0.000000010969705, w: 0.95491594}
+  m_LocalRotation: {x: 0.2968764, y: -0.00000003106749, z: 0.000000009658656, w: 0.95491594}
   m_LocalPosition: {x: -0.000000006705523, y: 2.5, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1262,7 +1263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336684039}
-  m_LocalRotation: {x: 0.24414216, y: 0.016197639, z: -0.0060260603, w: 0.9695855}
+  m_LocalRotation: {x: 0.24414216, y: 0.016197607, z: -0.006026048, w: 0.9695855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

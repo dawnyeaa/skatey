@@ -19,6 +19,7 @@ public class SkateboardStateMachine : StateMachine {
   public AnimationCurve PushAccelCurve;
   public float LookRotationDampFactor = 10f;
   public float TurnSpeedDamping = 0.3f;
+  public float TurnSlowdown = 1f;
   public float DecelTime = 0f;
   public bool Decelerating = false;
   public float PushTime = 0f;
