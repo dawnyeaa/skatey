@@ -10,8 +10,6 @@ public class FuckYeah : MonoBehaviour {
   public float truckSpacing = 0.205f;
   public float maxTruckTurnDeg = 8.34f;
   public float wheelRadius = 0.03f;
-  private float wheelCircumfrence = 0.1884956f;
-
   public float goSpeed = 3.2f;
   public Animator skateanim;
   public WheelController wheels;
@@ -19,7 +17,7 @@ public class FuckYeah : MonoBehaviour {
   // Update is called once per frame
   void Update() {
     skateanim.SetFloat("dir", turn);
-    SpinWheels(goSpeed, wheelCircumfrence);
+    SpinWheels(goSpeed, Mathf.PI*2*wheelRadius);
     float deltaPos = Time.deltaTime*goSpeed;
     float rad = truckSpacing/Mathf.Sin(Mathf.Deg2Rad*turn*maxTruckTurnDeg);
     float circum = Mathf.PI*2*rad;
