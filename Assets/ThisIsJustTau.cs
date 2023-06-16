@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public class ThisIsJustTau {
+public static class ThisIsJustTau {
   public const float TAU = Mathf.PI*2;
 }
