@@ -41,7 +41,7 @@ public abstract class SkateboardBaseState : State {
     // if we're slowing down
     else if (stateMachine.Decelerating) {
       stateMachine.DecelTime += Time.deltaTime;
-      stateMachine.CurrentSpeed = (stateMachine.Mass*stateMachine.CoastSpeed)/((stateMachine.Drag*stateMachine.CoastSpeed*stateMachine.DecelTime)+stateMachine.Mass);
+      stateMachine.CurrentSpeed = (stateMachine.Mass*stateMachine.CoastSpeed)/((stateMachine.Drag*stateMachine.DragMultiplier*stateMachine.CoastSpeed*stateMachine.DecelTime)+stateMachine.Mass);
       if (stateMachine.CurrentSpeed <= 0) {
         stateMachine.CurrentSpeed = 0;
         stateMachine.Decelerating = false;
@@ -52,11 +52,11 @@ public abstract class SkateboardBaseState : State {
   protected void CalculateTurn() {
     if (stateMachine.CurrentSpeed > 0) {
       stateMachine.Turning = Mathf.SmoothDamp(stateMachine.Turning, stateMachine.Input.turn, ref TurnSpeed, stateMachine.TurnSpeedDamping);
-      stateMachine.CurrentSpeed -= Mathf.Abs(stateMachine.Turning)*stateMachine.TurnSlowdown*Time.deltaTime;
       float deltaPos = Time.deltaTime*stateMachine.CurrentSpeed;
       float rad = stateMachine.TruckSpacing/Mathf.Sin(Mathf.Deg2Rad*stateMachine.Turning*stateMachine.MaxTruckTurnDeg);
-      float circum = Mathf.PI*2*rad;
+      float circum = ThisIsJustTau.TAU*rad;
       stateMachine.Facing += deltaPos/circum;
+      stateMachine.DragMultiplier = 1.0f + Mathf.Abs(stateMachine.Turning)*stateMachine.TurnSlowdown;
     }
   }
 
@@ -70,7 +70,7 @@ public abstract class SkateboardBaseState : State {
   }
 
   protected void SpinWheels() {
-    float circum = Mathf.PI*2*stateMachine.WheelRadius;
+    float circum = ThisIsJustTau.TAU*stateMachine.WheelRadius;
     stateMachine.Wheels.AddRotation(((Time.deltaTime*stateMachine.CurrentSpeed)/circum)*360f);
   }
 }

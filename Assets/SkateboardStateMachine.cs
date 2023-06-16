@@ -25,7 +25,8 @@ public class SkateboardStateMachine : StateMachine {
   public float PushTime = 0f;
   public bool Pushing = false;
   public AnimationCurve PushSpeedFalloff;
-  public float ExcessPushStrength = 0.1f;
+  //public float ExcessPushStrength = 0.1f;
+  public float DragMultiplier = 1.0f;
   public float CoastSpeed;
   public Transform MainCamera { get; private set; }
   public InputController Input { get; private set; }
