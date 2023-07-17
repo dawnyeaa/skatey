@@ -25,6 +25,7 @@ public abstract class SkateboardBaseState : State {
 
   protected void Accelerate() {
     // acceleration stuff first
+    // theres a pushing duration, it increases the speed by a curve over its duration - to emulate pushing
     if (stateMachine.Pushing) {
       stateMachine.PushTime += Time.deltaTime;
       float pushRemapped = stateMachine.PushAccelCurve.Evaluate(stateMachine.PushTime/stateMachine.PushDuration);

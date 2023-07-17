@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 364812383}
   - component: {fileID: 364812382}
   m_Layer: 0
-  m_Name: Stairs
+  m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3238,7 +3238,7 @@ GameObject:
   - component: {fileID: 835217647}
   - component: {fileID: 835217646}
   m_Layer: 0
-  m_Name: cienemafjsjeh
+  m_Name: cinemachineRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4289,7 +4289,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28466
+  m_Name: pb_Mesh32588
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6922,7 +6922,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28578
+  m_Name: pb_Mesh33322
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

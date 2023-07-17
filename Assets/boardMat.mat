@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: board
+  m_Name: boardMat
   m_Shader: {fileID: -6465566751694194690, guid: cbe5a29fbeec5f54eb7a57269eef6ba6,
     type: 3}
   m_ValidKeywords: []
